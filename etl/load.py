@@ -7,7 +7,6 @@ def load_dimension(table_name, column_name, values):
     """Load unique values into a dimension table."""
 
     with engine.begin() as conn:
-        conn.execute(text(f"DELETE FROM {table_name}"))
 
         for value in sorted(values):
             conn.execute(
@@ -21,10 +20,33 @@ def load_dimension(table_name, column_name, values):
     print(f"✔ {table_name} loaded ({len(values)} records)")
 
 
+# -----------------------------
+# Load Clean Dataset
+# -----------------------------
 df = pd.read_csv("data/cleaned/job_postings_cleaned.csv")
 
 print(f"Dataset Loaded ({len(df)} rows)")
 
+
+# -----------------------------
+# Clear Database Tables
+# -----------------------------
+with engine.begin() as conn:
+    conn.execute(text("""
+        TRUNCATE TABLE
+            job_postings,
+            companies,
+            locations,
+            sources
+        RESTART IDENTITY CASCADE;
+    """))
+
+print("✔ Database tables cleared")
+
+
+# -----------------------------
+# Load Dimension Tables
+# -----------------------------
 load_dimension(
     "companies",
     "company_name",
@@ -42,6 +64,7 @@ load_dimension(
     "source_name",
     df["source"].unique()
 )
+
 
 # -----------------------------
 # Build Lookup Dictionaries
@@ -69,15 +92,13 @@ with engine.connect() as conn:
         )
     }
 
-print("Lookup dictionaries created.")
+print("✔ Lookup dictionaries created")
 
 
 # -----------------------------
 # Load Job Postings
 # -----------------------------
 with engine.begin() as conn:
-
-    conn.execute(text("DELETE FROM job_postings"))
 
     for _, row in df.iterrows():
 
@@ -115,4 +136,4 @@ with engine.begin() as conn:
             }
         )
 
-print(f"Job Postings Loaded Successfully! ({len(df)} records)")
+print(f"✔ Job Postings Loaded Successfully! ({len(df)} records)")

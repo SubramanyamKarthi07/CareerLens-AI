@@ -7,7 +7,7 @@ print("=" * 60)
 print("CAREERLENS-AI DATA TRANSFORMATION")
 print("=" * 60)
 
-df = pd.read_csv("data/raw/job_postings.csv")
+df = pd.read_csv("data/cleaned/job_postings_cleaned.csv")
 
 print(f"\nOriginal Shape : {df.shape}")
 
@@ -16,7 +16,7 @@ print(f"\nOriginal Shape : {df.shape}")
 # ----------------------------
 columns_to_drop = ["work_type", "employment_type"]
 
-df.drop(columns=columns_to_drop, inplace=True)
+df.drop(columns=columns_to_drop, inplace=True, errors="ignore")
 
 print("\n✓ Removed empty columns")
 
@@ -29,6 +29,24 @@ df["source"] = df["source"].fillna("Unknown")
 df["description"] = df["description"].fillna("No Description")
 
 print("✓ Filled missing values")
+
+# ----------------------------
+# Standardize Source Names
+# ----------------------------
+df["source"] = (
+    df["source"]
+    .str.strip()
+    .str.title()
+)
+
+# Preserve official branding
+df["source"] = df["source"].replace({
+    "Linkedin": "LinkedIn",
+    "Indeed": "Indeed",
+    "Unknown": "Unknown"
+})
+
+print("✓ Standardized source names")
 
 # ----------------------------
 # Convert Date
