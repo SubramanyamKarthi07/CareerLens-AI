@@ -1,0 +1,621 @@
+company,Total_Jobs,Unique_Roles,Locations,Job_Percentage
+Meta,70,14,18,6.83
+Netflix,31,30,7,3.02
+Amazon,18,11,8,1.76
+Google,16,10,7,1.56
+****,14,7,10,1.37
+********,8,8,5,0.78
+TikTok,8,6,4,0.78
+AARATECH,8,2,6,0.78
+Handshake,7,4,1,0.68
+*****,7,4,7,0.68
+Deloitte,6,5,3,0.59
+Uplers,6,4,2,0.59
+Spotify,6,6,3,0.59
+PepsiCo,6,3,4,0.59
+JPMorganChase,6,6,5,0.59
+FanDuel,6,5,2,0.59
+Experian,5,5,3,0.49
+******,5,5,5,0.49
+PyjamaHR,5,1,5,0.49
+Pinterest,5,2,4,0.49
+Blueprint,5,1,5,0.49
+Ford Motor Company,4,4,2,0.39
+Shopee,4,4,3,0.39
+EY,4,3,3,0.39
+COLSA,4,4,4,0.39
+Virtusa,4,4,3,0.39
+LinkedIn,4,4,3,0.39
+Foley,4,1,4,0.39
+*******,4,4,4,0.39
+INSPYR Solutions,4,2,3,0.39
+DoorDash,4,2,4,0.39
+foodpanda,4,3,3,0.39
+Kforce Inc,4,4,4,0.39
+LTIMindtree,4,2,4,0.39
+Lensa,4,4,4,0.39
+Microsoft,4,2,3,0.39
+NielsenIQ,4,4,4,0.39
+Petco,4,3,3,0.39
+*** *****,3,2,1,0.29
+Cognizant,3,3,2,0.29
+Docusign,3,2,2,0.29
+CGI,3,3,2,0.29
+*********,3,1,3,0.29
+ASOS.com,3,2,1,0.29
+Notion,3,3,2,0.29
+OGC Global,3,2,2,0.29
+Chubb Life New Zealand,3,1,3,0.29
+KPMG India,3,3,3,0.29
+Elder Research,3,2,2,0.29
+PwC India,3,3,2,0.29
+Citi,3,3,2,0.29
+Roku,3,2,3,0.29
+Ericsson,3,3,3,0.29
+Ascendion,3,2,2,0.29
+The Walt Disney Company,3,3,2,0.29
+***,3,3,1,0.29
+Insight Global,3,2,3,0.29
+Twitch,3,2,2,0.29
+ExxonMobil,3,2,2,0.29
+Lyft,3,3,1,0.29
+Walgreens,3,2,1,0.29
+Walmart,3,3,1,0.29
+Thomson Reuters,3,1,2,0.29
+Ibotta,2,2,1,0.2
+Cisco,2,1,2,0.2
+"HRCap, Inc.",2,1,1,0.2
+Helios,2,1,1,0.2
+Instagram,2,1,2,0.2
+American Express,2,2,2,0.2
+Coca-Cola HBC,2,2,1,0.2
+AppFolio,2,1,2,0.2
+Infosys,2,2,2,0.2
+JAMY INTERACTIVE,2,2,1,0.2
+Dentsply Sirona,2,2,1,0.2
+John Deere,2,2,1,0.2
+Jubilant FoodWorks Ltd.,2,1,1,0.2
+NVIDIA,2,1,2,0.2
+Keurig Dr Pepper Inc.,2,1,1,0.2
+Colliers,2,2,2,0.2
+Assurances Crédit Mutuel,2,2,1,0.2
+La Fosse,2,1,2,0.2
+Largeton Group,2,2,2,0.2
+Calm,2,2,1,0.2
+Discord,2,2,1,0.2
+Lockheed Martin,2,2,2,0.2
+Atlassian,2,1,1,0.2
+Mercedes-Benz Malaysia,2,2,1,0.2
+Exiger,2,1,2,0.2
+Authentic Brands Group,2,1,2,0.2
+"Mission Technologies, a division of HII",2,2,1,0.2
+Neostella,2,1,2,0.2
+Neotalent Conclusion,2,1,2,0.2
+Capgemini,2,2,2,0.2
+Explore Group,2,1,1,0.2
+Nike,2,1,1,0.2
+24 Hour Fitness,2,2,2,0.2
+Numero Data,2,2,2,0.2
+Banco Bradesco,2,2,2,0.2
+Oakley,2,2,1,0.2
+Oracle Database,2,1,1,0.2
+PT Indofood CBP Sukses Makmur Tbk - Noodle Division,2,1,1,0.2
+Palo Alto Networks,2,2,1,0.2
+PayPal,2,2,2,0.2
+Cedar,2,2,1,0.2
+CenterPoint Energy,2,2,2,0.2
+Hays,2,2,2,0.2
+PointClickCare,2,2,2,0.2
+PwC Acceleration Centers,2,2,1,0.2
+Crypto.com,2,2,2,0.2
+ICICIDirect,2,2,1,0.2
+Quizlet,2,2,2,0.2
+Recro,2,2,1,0.2
+Redwood Materials,2,1,2,0.2
+Rivian,2,2,2,0.2
+Abbott,2,2,2,0.2
+S&P Global,2,1,2,0.2
+Crédit Mutuel Méditerranéen,2,2,1,0.2
+Sicoob,2,1,1,0.2
+Snap Inc.,2,1,2,0.2
+Sony Interactive Entertainment,2,2,2,0.2
+Checkout.com,2,2,1,0.2
+StreetID,2,2,1,0.2
+Stripe,2,1,2,0.2
+Swinerton,2,1,2,0.2
+Tata Consultancy Services,2,2,2,0.2
+Tech Consulting,2,2,2,0.2
+Thales,2,2,2,0.2
+Chenega Corporation,2,1,1,0.2
+Aditi Consulting,2,2,2,0.2
+Adobe,2,1,2,0.2
+Toyota North America,2,2,1,0.2
+Chewy,2,1,2,0.2
+UPS,2,2,2,0.2
+Unknown Company,2,2,1,0.2
+Blinq,2,2,2,0.2
+Fanatics,2,1,1,0.2
+Cinepolis Corporativo,2,2,2,0.2
+Enlighten,2,2,1,0.2
+FinThrive,2,2,1,0.2
+iFood,2,1,2,0.2
+Avant-garde Health,1,1,1,0.1
+Aviture,1,1,1,0.1
+Avnet,1,1,1,0.1
+BBC,1,1,1,0.1
+BCD,1,1,1,0.1
+BOX8,1,1,1,0.1
+Bamboo Health,1,1,1,0.1
+Banco Falabella Chile,1,1,1,0.1
+Banco Sabadell,1,1,1,0.1
+Banco de Crédito BCP,1,1,1,0.1
+Banque Misr,1,1,1,0.1
+Barstool Sports,1,1,1,0.1
+Baselayer,1,1,1,0.1
+Bask Health,1,1,1,0.1
+"Bell & Associates, Inc.",1,1,1,0.1
+Bending Spoons,1,1,1,0.1
+Between Technology,1,1,1,0.1
+Birlasoft,1,1,1,0.1
+BlackRock,1,1,1,0.1
+Bombora,1,1,1,0.1
+Booking.com,1,1,1,0.1
+Boost Mobile,1,1,1,0.1
+Booz Allen Hamilton,1,1,1,0.1
+Bright Purple,1,1,1,0.1
+BrightCHAMPS,1,1,1,0.1
+Brooklinen,1,1,1,0.1
+Brooksource,1,1,1,0.1
+Buckingham Search,1,1,1,0.1
+Bvlgari,1,1,1,0.1
+Bytez,1,1,1,0.1
+C6 Bank,1,1,1,0.1
+CAVA,1,1,1,0.1
+CCS Global Tech,1,1,1,0.1
+CDK Global,1,1,1,0.1
+CPP Investments | Investissements RPC,1,1,1,0.1
+CSA,1,1,1,0.1
+CXC,1,1,1,0.1
+Cagwin & Dorward,1,1,1,0.1
+Cairo Bank Uganda,1,1,1,0.1
+California Department of Public Health,1,1,1,0.1
+CalypsoAI,1,1,1,0.1
+Camil Alimentos S/A,1,1,1,0.1
+Camping World,1,1,1,0.1
+"Cape Henry Associates, Acquired by JANUS Research Group",1,1,1,0.1
+Capgemini Engineering,1,1,1,0.1
+Capital Rx,1,1,1,0.1
+"Capstone Logistics, LLC",1,1,1,0.1
+Careem,1,1,1,0.1
+Cargill,1,1,1,0.1
+"Carollo Engineers, Inc.",1,1,1,0.1
+Casey's,1,1,1,0.1
+Caterpillar Inc.,1,1,1,0.1
+Centric Software,1,1,1,0.1
+Cerberus Capital Management,1,1,1,0.1
+Charles River Laboratories,1,1,1,0.1
+Charles Schwab,1,1,1,0.1
+Chevron,1,1,1,0.1
+Cielo,1,1,1,0.1
+Circana,1,1,1,0.1
+Circle K,1,1,1,0.1
+Circles,1,1,1,0.1
+Cititec,1,1,1,0.1
+City of New York,1,1,1,0.1
+Clear Capital,1,1,1,0.1
+Cloudwick,1,1,1,0.1
+"Clyde Companies, Inc.",1,1,1,0.1
+Cogna Educação,1,1,1,0.1
+Colibri Group,1,1,1,0.1
+Collabera,1,1,1,0.1
+Commonwealth Bank,1,1,1,0.1
+Commonwealth of Kentucky,1,1,1,0.1
+Como,1,1,1,0.1
+Concord,1,1,1,0.1
+ConglomerateIT,1,1,1,0.1
+Connect Tech+Talent,1,1,1,0.1
+ConnectedX Inc.,1,1,1,0.1
+Connective Talent,1,1,1,0.1
+Consulting Point,1,1,1,0.1
+Conviva,1,1,1,0.1
+CooperVision,1,1,1,0.1
+Corporate Tools,1,1,1,0.1
+Costco Wholesale,1,1,1,0.1
+Covetus,1,1,1,0.1
+Crisil,1,1,1,0.1
+Crédit Agricole CIB,1,1,1,0.1
+CyberCoders,1,1,1,0.1
+D.A. Davidson Companies,1,1,1,0.1
+DHL Express,1,1,1,0.1
+DHL Supply Chain,1,1,1,0.1
+Dario,1,1,1,0.1
+Dasa,1,1,1,0.1
+Datarisk,1,1,1,0.1
+Delivery Hero,1,1,1,0.1
+"Delphi-US, LLC - Peacemakers in the Talent War",1,1,1,0.1
+Delta Air Lines,1,1,1,0.1
+Delta Dental Ins.,1,1,1,0.1
+Despegar,1,1,1,0.1
+Direcional Engenharia,1,1,1,0.1
+Discovery Limited,1,1,1,0.1
+Disney Entertainment,1,1,1,0.1
+Disney Music Group,1,1,1,0.1
+Doing Things,1,1,1,0.1
+EXL,1,1,1,0.1
+Eden Smith Group,1,1,1,0.1
+Edenred Brasil,1,1,1,0.1
+Eli Lilly and Company,1,1,1,0.1
+Endeavor,1,1,1,0.1
+Engine,1,1,1,0.1
+Enjins,1,1,1,0.1
+Ensono,1,1,1,0.1
+Envoy,1,1,1,0.1
+Equifax,1,1,1,0.1
+Equiliem,1,1,1,0.1
+Equitable,1,1,1,0.1
+Etiqa Insurance Singapore,1,1,1,0.1
+Euro Information Developpements / EID,1,1,1,0.1
+Eviden,1,1,1,0.1
+Expansion,1,1,1,0.1
+Experian Spanish Latam,1,1,1,0.1
+FM Talent,1,1,1,0.1
+FNB South Africa,1,1,1,0.1
+Falabella,1,1,1,0.1
+Finix,1,1,1,0.1
+Fivecast,1,1,1,0.1
+Fizz,1,1,1,0.1
+Foodsmart,1,1,1,0.1
+Forbes Advisor,1,1,1,0.1
+Forest Lawn Memorial Parks and Mortuaries,1,1,1,0.1
+FormFactor Inc.,1,1,1,0.1
+Fractal,1,1,1,0.1
+Frávega,1,1,1,0.1
+FurtherAI,1,1,1,0.1
+FutureCare Health,1,1,1,0.1
+GSK,1,1,1,0.1
+Games24x7,1,1,1,0.1
+Godrej Agrovet Limited,1,1,1,0.1
+Google DeepMind,1,1,1,0.1
+GrowthAssistant,1,1,1,0.1
+Gruppo BCC Iccrea,1,1,1,0.1
+"H3C, LLC",1,1,1,0.1
+HCLTech,1,1,1,0.1
+HDFC Bank,1,1,1,0.1
+HYPERPROOF,1,1,1,0.1
+Hamilton Porter,1,1,1,0.1
+Hanson Lee,1,1,1,0.1
+Haybury,1,1,1,0.1
+Healthcare.com,1,1,1,0.1
+Helic & Co.,1,1,1,0.1
+Heluna Health,1,1,1,0.1
+HigherVisibility,1,1,1,0.1
+HomeBuddy,1,1,1,0.1
+Honeywell,1,1,1,0.1
+Houston Methodist,1,1,1,0.1
+Howmet Aerospace,1,1,1,0.1
+Huntley Community School District 158,1,1,1,0.1
+Hypersonix Inc.,1,1,1,0.1
+ID.me,1,1,1,0.1
+IDEXX,1,1,1,0.1
+IRIUM,1,1,1,0.1
+Ignite Digital Services,1,1,1,0.1
+Illumination Works,1,1,1,0.1
+Immersum,1,1,1,0.1
+Incedo Inc.,1,1,1,0.1
+Indiana University Indianapolis,1,1,1,0.1
+Indigo,1,1,1,0.1
+IndusInd Bank,1,1,1,0.1
+Inetum,1,1,1,0.1
+Inizio Partners,1,1,1,0.1
+Instacart,1,1,1,0.1
+Artefact,1,1,1,0.1
+Instituto Goiano de Oncologia e Hematologia (INGOH),1,1,1,0.1
+IntePros,1,1,1,0.1
+Intellect Group,1,1,1,0.1
+Inter,1,1,1,0.1
+InterEx Group,1,1,1,0.1
+Interbank,1,1,1,0.1
+Invenia Group,1,1,1,0.1
+Itaú Unibanco,1,1,1,0.1
+*** ***** *****,1,1,1,0.1
+JANUS Research Group,1,1,1,0.1
+JFrog,1,1,1,0.1
+*** ******,1,1,1,0.1
+Jake Taylor,1,1,1,0.1
+Javvy Coffee,1,1,1,0.1
+Jex - Recruitment for scaling businesses,1,1,1,0.1
+*** ****** *** ***,1,1,1,0.1
+*** ******* ****,1,1,1,0.1
+KPMG España,1,1,1,0.1
+"**** ********* *****, * *** *******",1,1,1,0.1
+Kantar,1,1,1,0.1
+**** *********** ********,1,1,1,0.1
+Key Benefit Administrators,1,1,1,0.1
+***** ***,1,1,1,0.1
+Kindred,1,1,1,0.1
+Kitsap Credit Union,1,1,1,0.1
+Korn Ferry,1,1,1,0.1
+Krungthai Bank,1,1,1,0.1
+LPL Financial,1,1,1,0.1
+***** *** *****,1,1,1,0.1
+****** (*** ***** ****** ****** *******),1,1,1,0.1
+La Poste Groupe,1,1,1,0.1
+Laborde Products,1,1,1,0.1
+Lagardère Travel Retail,1,1,1,0.1
+Lake Trust Credit Union,1,1,1,0.1
+Lams Technology LLC,1,1,1,0.1
+****** ** ***,1,1,1,0.1
+Leader Bank,1,1,1,0.1
+Lenovo,1,1,1,0.1
+****** *****,1,1,1,0.1
+Leonar,1,1,1,0.1
+****** ***** *.*.,1,1,1,0.1
+****** ****** ************ *** ***,1,1,1,0.1
+LogicMatrix,1,1,1,0.1
+Lorien,1,1,1,0.1
+"Lowe's Companies, Inc.",1,1,1,0.1
+Lumenalta,1,1,1,0.1
+Luminance,1,1,1,0.1
+Luxoft,1,1,1,0.1
+****** *******,1,1,1,0.1
+Made Tech,1,1,1,0.1
+Malk Partners,1,1,1,0.1
+ManTech,1,1,1,0.1
+Mastech Digital,1,1,1,0.1
+Mastek,1,1,1,0.1
+Matlen Silver,1,1,1,0.1
+McKinsey & Company,1,1,1,0.1
+McMaster-Carr,1,1,1,0.1
+Medpace,1,1,1,0.1
+******* ******,1,1,1,0.1
+Mercury Insurance Company,1,1,1,0.1
+******* ****** *-****,1,1,1,0.1
+Miami HEAT,1,1,1,0.1
+******* *******,1,1,1,0.1
+Middle Seat,1,1,1,0.1
+Minted,1,1,1,0.1
+Miracle Consulting Inc.,1,1,1,0.1
+Miratech,1,1,1,0.1
+******** *******,1,1,1,0.1
+Mitchell Martin Inc.,1,1,1,0.1
+Mondu,1,1,1,0.1
+Morgan Stanley,1,1,1,0.1
+Mosaic North America,1,1,1,0.1
+Mphasis,1,1,1,0.1
+Munich Re,1,1,1,0.1
+NBCUniversal,1,1,1,0.1
+NRG Energy,1,1,1,0.1
+Equip,1,1,1,0.1
+Naranja X,1,1,1,0.1
+National Basketball Association (NBA),1,1,1,0.1
+National General Insurance,1,1,1,0.1
+******** *********,1,1,1,0.1
+**********,1,1,1,0.1
+*********** **** ***.,1,1,1,0.1
+Network Recruitment,1,1,1,0.1
+Newark Unified School District,1,1,1,0.1
+Nextdoor,1,1,1,0.1
+Nexxen,1,1,1,0.1
+Nicholson Glover,1,1,1,0.1
+"************, ***",1,1,1,0.1
+"*******, ** *** *******",1,1,1,0.1
+Nixor,1,1,1,0.1
+****/***** *******,1,1,1,0.1
+NovumHealth,1,1,1,0.1
+***ú ********,1,1,1,0.1
+Nuro,1,1,1,0.1
+OCBC Indonesia,1,1,1,0.1
+"OCULUS, Inc.",1,1,1,0.1
+ODDO BHF,1,1,1,0.1
+A & J Fencing,1,1,1,0.1
+OPPO,1,1,1,0.1
+A Place for Mom,1,1,1,0.1
+Observador,1,1,1,0.1
+Omada Health,1,1,1,0.1
+"OpenArc, LLC.",1,1,1,0.1
+Openforce,1,1,1,0.1
+Oracle,1,1,1,0.1
+A-Line Staffing Solutions,1,1,1,0.1
+Orion Innovation,1,1,1,0.1
+PENNYMAC,1,1,1,0.1
+PNC Financial Services Group,1,1,1,0.1
+PROCEPT BioRobotics,1,1,1,0.1
+A.C.Camargo Cancer Center,1,1,1,0.1
+PT. Medquest Jaya Global,1,1,1,0.1
+AARP,1,1,1,0.1
+Paramount,1,1,1,0.1
+Paramount Pictures,1,1,1,0.1
+Park Place Technologies,1,1,1,0.1
+AE Studio,1,1,1,0.1
+Peerlogic,1,1,1,0.1
+Peninsula Del Rey,1,1,1,0.1
+AKT London,1,1,1,0.1
+Peraton,1,1,1,0.1
+Persistent Systems,1,1,1,0.1
+AMBOSS,1,1,1,0.1
+PicPay,1,1,1,0.1
+PingWind Inc. (SDVOSB),1,1,1,0.1
+Accel Entertainment,1,1,1,0.1
+Pion,1,1,1,0.1
+Piper Companies,1,1,1,0.1
+Plaid,1,1,1,0.1
+Point72,1,1,1,0.1
+Acorns,1,1,1,0.1
+Presidio,1,1,1,0.1
+Procter & Gamble,1,1,1,0.1
+Propel,1,1,1,0.1
+Protect Group,1,1,1,0.1
+Publicis Collective,1,1,1,0.1
+Publicis Digital Experience,1,1,1,0.1
+PureFuel,1,1,1,0.1
+ActivTrak,1,1,1,0.1
+Adecco,1,1,1,0.1
+Advansys,1,1,1,0.1
+"Pyramid Consulting, Inc",1,1,1,0.1
+QuanTech Partners,1,1,1,0.1
+Quantix Search,1,1,1,0.1
+Aer Lingus,1,1,1,0.1
+R1 RCM,1,1,1,0.1
+RYZE,1,1,1,0.1
+Randstad Life Sciences US,1,1,1,0.1
+Raspberry Pi Foundation,1,1,1,0.1
+Realtor.com,1,1,1,0.1
+Affirm,1,1,1,0.1
+Red Hat,1,1,1,0.1
+Airbnb,1,1,1,0.1
+Renault Digital,1,1,1,0.1
+Ringside Talent,1,1,1,0.1
+"Akraya, Inc.",1,1,1,0.1
+Robinhood,1,1,1,0.1
+Rokt,1,1,1,0.1
+Alan,1,1,1,0.1
+RxAnte,1,1,1,0.1
+"Ryan Companies US, Inc.",1,1,1,0.1
+Alibaba Cloud,1,1,1,0.1
+SBH Fashion,1,1,1,0.1
+SCA Health,1,1,1,0.1
+SHEIN,1,1,1,0.1
+SJRC Texas | Belong,1,1,1,0.1
+SLB,1,1,1,0.1
+SMi Engineering,1,1,1,0.1
+SPECTRAFORCE,1,1,1,0.1
+SWITS DIGITAL Private Limited,1,1,1,0.1
+Safran.AI (ex Preligens),1,1,1,0.1
+Salt,1,1,1,0.1
+Samba TV,1,1,1,0.1
+Samsara,1,1,1,0.1
+Samsung Electronics,1,1,1,0.1
+Sayari,1,1,1,0.1
+Schbang,1,1,1,0.1
+Scotiabank,1,1,1,0.1
+Searchability®,1,1,1,0.1
+Seer,1,1,1,0.1
+Setel,1,1,1,0.1
+SewerAI,1,1,1,0.1
+ShimentoX,1,1,1,0.1
+Alivi,1,1,1,0.1
+Allison Worldwide,1,1,1,0.1
+Sigma,1,1,1,0.1
+Sigma Suisse,1,1,1,0.1
+Simbe,1,1,1,0.1
+Simera,1,1,1,0.1
+SiteZeus,1,1,1,0.1
+Skai,1,1,1,0.1
+Smith.ai,1,1,1,0.1
+Almosafer,1,1,1,0.1
+Sodexo,1,1,1,0.1
+Sogeti,1,1,1,0.1
+Solar Swim,1,1,1,0.1
+Sonepar,1,1,1,0.1
+Sony,1,1,1,0.1
+Altimetrik,1,1,1,0.1
+SpaceX,1,1,1,0.1
+Spectrum,1,1,1,0.1
+Spot Freight,1,1,1,0.1
+Amartha,1,1,1,0.1
+Square,1,1,1,0.1
+Starcom,1,1,1,0.1
+StatusNeo,1,1,1,0.1
+Stefanini North America and APAC,1,1,1,0.1
+Stok,1,1,1,0.1
+Amazon.com,1,1,1,0.1
+StretchLab- Irvine Spectrum,1,1,1,0.1
+Strider Technologies,1,1,1,0.1
+Ambev,1,1,1,0.1
+American Airlines,1,1,1,0.1
+Swoon,1,1,1,0.1
+TEKsystems,1,1,1,0.1
+TIME dotCom Berhad,1,1,1,0.1
+TLP Consultancy Ltd,1,1,1,0.1
+TTC Group,1,1,1,0.1
+"Take2 Consulting, LLC",1,1,1,0.1
+Takeda,1,1,1,0.1
+Target,1,1,1,0.1
+Target Optical,1,1,1,0.1
+Amplytics,1,1,1,0.1
+Tealium,1,1,1,0.1
+Antenna,1,1,1,0.1
+Tech Mahindra,1,1,1,0.1
+Tech Mahindra Business Process Services,1,1,1,0.1
+TechHeads,1,1,1,0.1
+TechHuman,1,1,1,0.1
+TechOp Solutions International,1,1,1,0.1
+Tecla T,1,1,1,0.1
+Tenet Healthcare,1,1,1,0.1
+Anytime Mailbox,1,1,1,0.1
+The Arena,1,1,1,0.1
+The Bay Club Company,1,1,1,0.1
+The Energy Authority,1,1,1,0.1
+The HEINEKEN Company,1,1,1,0.1
+The Hanover Insurance Group,1,1,1,0.1
+The Home Depot,1,1,1,0.1
+Apna Mart,1,1,1,0.1
+The Walt Disney Studios,1,1,1,0.1
+AppsFlyer,1,1,1,0.1
+Thryv,1,1,1,0.1
+TieTalent,1,1,1,0.1
+Apside,1,1,1,0.1
+Toyota Financial Services (UK) PLC,1,1,1,0.1
+Arc,1,1,1,0.1
+Trace3,1,1,1,0.1
+Tradeweb,1,1,1,0.1
+Tubi,1,1,1,0.1
+Tundra Technical Solutions,1,1,1,0.1
+"Arsenal Biosciences, Inc.",1,1,1,0.1
+UK Ministry of Defence,1,1,1,0.1
+Asana,1,1,1,0.1
+Ultralytics,1,1,1,0.1
+University of Warwick,1,1,1,0.1
+Ascendum Solutions,1,1,1,0.1
+Aspect Software,1,1,1,0.1
+Urban Gym Group,1,1,1,0.1
+Ustar Education(Onsite),1,1,1,0.1
+"V-Soft Consulting Group, Inc.",1,1,1,0.1
+Vallourec,1,1,1,0.1
+Veho,1,1,1,0.1
+VentureSoft,1,1,1,0.1
+Veracity Software Inc,1,1,1,0.1
+Vertisystem,1,1,1,0.1
+Vevo,1,1,1,0.1
+Vimeo,1,1,1,0.1
+Aston Martin F1 Team,1,1,1,0.1
+Visionaire Partners,1,1,1,0.1
+Volkswagen Digital:Hub,1,1,1,0.1
+Astria Digital,1,1,1,0.1
+Aureon Consulting,1,1,1,0.1
+Warner Music Group,1,1,1,0.1
+Wealthfront,1,1,1,0.1
+Webologix Ltd/ INC,1,1,1,0.1
+Weekday (YC W21),1,1,1,0.1
+Westfield Insurance,1,1,1,0.1
+WhatsApp,1,1,1,0.1
+Wolt,1,1,1,0.1
+Workana,1,1,1,0.1
+Workday,1,1,1,0.1
+Yape,1,1,1,0.1
+Yext,1,1,1,0.1
+Ypê,1,1,1,0.1
+ZayZoon,1,1,1,0.1
+Zazzle,1,1,1,0.1
+Zenith,1,1,1,0.1
+Zest AI,1,1,1,0.1
+Zoom,1,1,1,0.1
+Zurich Insurance,1,1,1,0.1
+alice + olivia,1,1,1,0.1
+americanas s.a.,1,1,1,0.1
+apm monaco,1,1,1,0.1
+enable Technology,1,1,1,0.1
+Aurum,1,1,1,0.1
+i-Pharm Consulting,1,1,1,0.1
+i3,1,1,1,0.1
+Autodesk,1,1,1,0.1
+iSpot,1,1,1,0.1
+mc2i,1,1,1,0.1
+moomoo,1,1,1,0.1
+nineDots.io,1,1,1,0.1
+noon,1,1,1,0.1
+roadsurfer,1,1,1,0.1
+technology,1,1,1,0.1
+tiket.com,1,1,1,0.1
+upGrad,1,1,1,0.1
+天风证券股份有限公司,1,1,1,0.1

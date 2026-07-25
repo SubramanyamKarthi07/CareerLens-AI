@@ -1,0 +1,357 @@
+location,Total_Jobs,Companies,Unique_Roles,Job_Percentage
+United States,73,50,49,7.12
+"New York, NY",65,43,44,6.34
+"San Francisco, CA",49,29,29,4.78
+"Bengaluru, Karnataka, India",39,28,28,3.8
+"Remote, US",23,22,20,2.24
+"Seattle, WA",15,8,13,1.46
+"London, England, United Kingdom",15,11,12,1.46
+"London Area, United Kingdom",14,13,8,1.37
+"Gurugram, Haryana, India",13,10,8,1.27
+"Los Angeles, CA",13,7,10,1.27
+"Sunnyvale, CA",11,6,10,1.07
+"Chicago, IL",11,10,7,1.07
+Unknown Location,11,6,10,1.07
+"Mountain View, CA",11,8,11,1.07
+"Bellevue, WA",10,5,7,0.98
+"*******, **",10,7,8,0.98
+"Austin, TX",10,8,9,0.98
+"São Paulo, São Paulo, Brazil",9,8,9,0.88
+"Washington, DC",9,6,6,0.88
+"California, United States",8,7,6,0.78
+"New York, United States",8,7,8,0.78
+"San Jose, CA",8,6,7,0.78
+"Strasbourg, Grand Est, France",7,5,6,0.68
+"Houston, TX",7,6,5,0.68
+"Toronto, Ontario, Canada",7,5,7,0.68
+"Pune, Maharashtra, India",7,6,6,0.68
+"Mumbai, Maharashtra, India",7,7,7,0.68
+"Boston, MA",7,6,4,0.68
+"Dublin, County Dublin, Ireland",7,6,6,0.68
+"Menlo Park, CA",6,1,5,0.59
+"Los Gatos, CA",6,1,6,0.59
+"Atlanta, GA",6,5,6,0.59
+"*********, *********, *****",6,5,6,0.59
+"Fremont, CA",6,1,4,0.59
+"Hyderabad, Telangana, India",6,6,5,0.59
+"Plano, TX",6,4,6,0.59
+San Francisco Bay Area,5,5,4,0.49
+New York City Metropolitan Area,5,4,5,0.49
+"Arlington, VA",5,3,5,0.49
+"Redmond, WA",5,3,5,0.49
+"Santa Clara, CA, US",5,3,5,0.49
+"*******, *******, ******",5,5,5,0.49
+****** ******,4,4,4,0.39
+"******, ****** ******, *******",4,3,4,0.39
+"Singapore, Singapore",4,4,4,0.39
+"Paris, Île-de-France, France",4,4,4,0.39
+"Scottsdale, AZ",4,4,4,0.39
+"Edmonton, Alberta, Canada",4,4,3,0.39
+"Chennai, Tamil Nadu, India",4,3,3,0.39
+"********, ******** ************ ******, *****",4,4,3,0.39
+"Palo Alto, CA",4,4,4,0.39
+"Augusta, GA",4,2,2,0.39
+"Berlin, Berlin, Germany",4,4,4,0.39
+Mumbai Metropolitan Region,4,4,4,0.39
+"Indianapolis, IN",4,4,4,0.39
+"Jakarta, Jakarta, Indonesia",4,3,3,0.39
+"Dallas, TX",4,4,3,0.39
+India,4,4,2,0.39
+"Sunnyvale, CA, US",3,3,3,0.29
+Washington DC-Baltimore Area,3,3,3,0.29
+"Waltham, MA",3,2,3,0.29
+"Amsterdam, North Holland, Netherlands",3,3,3,0.29
+"Miami, FL",3,3,2,0.29
+"Noida, Uttar Pradesh, India",3,2,2,0.29
+"Nashville, TN",3,3,3,0.29
+"Denver, CO",3,2,3,0.29
+Brazil,3,3,3,0.29
+"Burlingame, CA",3,1,2,0.29
+"Gurgaon, Haryana, India",3,3,3,0.29
+"Karnataka, India",3,2,2,0.29
+"Deerfield, IL",3,1,2,0.29
+"Dearborn, MI",3,1,3,0.29
+"Florida, United States",3,3,3,0.29
+Greater Kolkata Area,3,2,3,0.29
+"Charlotte, NC",3,3,3,0.29
+******* ******* ****,3,1,2,0.29
+"Texas, United States",3,3,2,0.29
+"Troy, MI",2,2,2,0.2
+"Tampa, FL",2,2,2,0.2
+"Washington, DC, US",2,1,1,0.2
+"Warsaw, Mazowieckie, Poland",2,2,2,0.2
+"***** ****, **",2,1,2,0.2
+"Santiago, Santiago Metropolitan Region, Chile",2,2,2,0.2
+"Santa Monica, CA",2,2,2,0.2
+"Sant Cugat del Vallès, Catalonia, Spain",2,2,2,0.2
+Canada,2,2,2,0.2
+Spain,2,2,2,0.2
+"South San Francisco, CA",2,2,2,0.2
+"Sofia, Sofia City, Bulgaria",2,1,2,0.2
+"San Jose, CA, US",2,2,2,0.2
+"San Francisco, CA, US",2,2,2,0.2
+"San Bruno, CA",2,1,2,0.2
+"Stockholm, Stockholm County, Sweden",2,1,2,0.2
+"Osasco, São Paulo, Brazil",2,2,2,0.2
+"Redwood City, CA, US",2,1,2,0.2
+"Raleigh, NC",2,2,2,0.2
+"Puchong, Selangor, Malaysia",2,1,2,0.2
+"Plantation, FL",2,2,2,0.2
+"Pittsburgh, PA",2,2,2,0.2
+Philippines,2,2,2,0.2
+"Concord, CA, US",2,2,2,0.2
+"Brasília, Federal District, Brazil",2,1,1,0.2
+"Omaha, NE",2,2,2,0.2
+"North Carolina, United States",2,2,2,0.2
+"Newark, CA",2,2,2,0.2
+"New York, NY, US",2,1,2,0.2
+"New Jersey, United States",2,2,2,0.2
+"Navi Mumbai, Maharashtra, India",2,1,2,0.2
+"Bangalore Urban, Karnataka, India",2,1,2,0.2
+Lisbon Metropolitan Area,2,2,2,0.2
+"Mississauga, Ontario, Canada",2,2,2,0.2
+"Minneapolis, MN",2,2,2,0.2
+"Mexico City, Mexico",2,2,2,0.2
+"Merrifield, VA",2,1,1,0.2
+"Livermore, CA, US",2,1,2,0.2
+Des Moines Metropolitan Area,2,2,2,0.2
+"Frisco, TX",2,1,1,0.2
+"Alpharetta, GA",2,2,2,0.2
+"Bengaluru East, Karnataka, India",2,2,2,0.2
+"Barcelona, Catalonia, Spain",2,2,2,0.2
+"Leeds, England, UK",2,1,1,0.2
+"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",2,2,2,0.2
+"Kuala Lumpur City, Federal Territory of Kuala Lumpur, Malaysia",2,1,1,0.2
+"Katy, TX",2,2,2,0.2
+"Jersey City, NJ",2,2,2,0.2
+"Irvine, CA",2,2,2,0.2
+"Indaiatuba, São Paulo, Brazil",2,1,2,0.2
+"Lisboa, Lisbon, Portugal",2,2,2,0.2
+"Lima, Peru",2,2,1,0.2
+"Austin, TX, US",2,2,2,0.2
+"Calgary, Alberta, Canada",2,2,2,0.2
+"Cairo, Egypt",2,1,2,0.2
+Greater Bengaluru Area,2,2,2,0.2
+"Burbank, CA",2,2,2,0.2
+"Buenos Aires, Buenos Aires Province, Argentina",2,2,2,0.2
+"Guwahati, Assam, India",2,1,2,0.2
+"********, *******, *****",2,1,2,0.2
+"********, **",2,2,2,0.2
+"*********, **",2,2,2,0.2
+"**********, **",2,1,1,0.2
+"********* *****, *********, *****",2,2,2,0.2
+"******, **",2,2,2,0.2
+"Adelaide, South Australia, Australia",2,2,2,0.2
+"******, *******, ****** *******",2,2,2,0.2
+"*** ****, **",2,1,2,0.2
+"*** *******, **",2,2,2,0.2
+"Valencia, Valencian Community, Spain",1,1,1,0.1
+Utica-Rome Area,1,1,1,0.1
+"Universal City, CA",1,1,1,0.1
+"******, ***** ******",1,1,1,0.1
+"******, ***********, *****",1,1,1,0.1
+"*****-****-*’***ô**, Î**-**-******, ******",1,1,1,0.1
+"****, ******, *****",1,1,1,0.1
+"***à, *********, *****",1,1,1,0.1
+"*ã* *****, *ã* *****, ******",1,1,1,0.1
+"Abu Dhabi Emirate, United Arab Emirates",1,1,1,0.1
+"Agoura Hills, CA",1,1,1,0.1
+"Sydney, New South Wales, Australia",1,1,1,0.1
+"Wilmington, DE, US",1,1,1,0.1
+"**** ***** *** ****è*, *********, *****",1,1,1,0.1
+"Shah Alam, Selangor, Malaysia",1,1,1,0.1
+"Silverstone, England, United Kingdom",1,1,1,0.1
+"****** ****, ******",1,1,1,0.1
+******** *****,1,1,1,0.1
+********** **-********* ****,1,1,1,0.1
+"*********, *****",1,1,1,0.1
+"Viladecans, Catalonia, Spain",1,1,1,0.1
+"Virginia Beach, VA, US",1,1,1,0.1
+"Florianópolis, Santa Catarina, Brazil",1,1,1,0.1
+"Fort Belvoir, VA, US",1,1,1,0.1
+"Fort Meade, MD, US",1,1,1,0.1
+"Fortaleza, Ceará, Brazil",1,1,1,0.1
+"Foster City, CA",1,1,1,0.1
+"Guadalajara, Jalisco, Mexico",1,1,1,0.1
+"Gulbarga, Karnataka, India",1,1,1,0.1
+"Hartford, CT",1,1,1,0.1
+"Herndon, VA",1,1,1,0.1
+"Holyoke, MA",1,1,1,0.1
+"Hong Kong, Hong Kong SAR",1,1,1,0.1
+"Hongkou District, Shanghai, China",1,1,1,0.1
+"Huntley, IL",1,1,1,0.1
+"Huntsville, AL, US",1,1,1,0.1
+"Gaydon, England, United Kingdom",1,1,1,0.1
+"Geneva, Switzerland",1,1,1,0.1
+"Georgia, United States",1,1,1,0.1
+"Glendale, CA",1,1,1,0.1
+"Goiânia, Goiás, Brazil",1,1,1,0.1
+"Great Burgh, England, United Kingdom",1,1,1,0.1
+Greater Tampa Bay Area,1,1,1,0.1
+Greece,1,1,1,0.1
+"Bremerton, WA, US",1,1,1,0.1
+"Brighton, MI",1,1,1,0.1
+"Bristol, England, United Kingdom",1,1,1,0.1
+"Brooklyn, NY",1,1,1,0.1
+"Bulverde, TX",1,1,1,0.1
+"Burr Ridge, IL",1,1,1,0.1
+"Cairo, Cairo, Egypt",1,1,1,0.1
+"Dubai, Dubai, United Arab Emirates",1,1,1,0.1
+"Dubai, United Arab Emirates",1,1,1,0.1
+"Dundee, Scotland, United Kingdom",1,1,1,0.1
+"Edison, NJ",1,1,1,0.1
+"Elmhurst, IL",1,1,1,0.1
+Greater Calgary Metropolitan Area,1,1,1,0.1
+Greater Chicago Area,1,1,1,0.1
+Greater Coventry Area,1,1,1,0.1
+Greater Istanbul,1,1,1,0.1
+"Greater London, England, United Kingdom",1,1,1,0.1
+Greater Minneapolis-St. Paul Area,1,1,1,0.1
+Greater Paris Metropolitan Region,1,1,1,0.1
+Greater Rio de Janeiro,1,1,1,0.1
+"Feltham, England, United Kingdom",1,1,1,0.1
+"Florham Park, NJ",1,1,1,0.1
+"Austin, Texas Metropolitan Area",1,1,1,0.1
+"Bangalore Rural, Karnataka, India",1,1,1,0.1
+"Lincolnshire, IL",1,1,1,0.1
+"Illinois, United States",1,1,1,0.1
+"Issy-les-Moulineaux, Île-de-France, France",1,1,1,0.1
+"Jacksonville, FL",1,1,1,0.1
+Jakarta Metropolitan Area,1,1,1,0.1
+"Jakarta, Indonesia",1,1,1,0.1
+"Jersey City, NJ, US",1,1,1,0.1
+"Johannesburg, Gauteng, South Africa",1,1,1,0.1
+"Kampala, Central Region, Uganda",1,1,1,0.1
+Kansas City Metropolitan Area,1,1,1,0.1
+Greater St. Louis,1,1,1,0.1
+"Manchester, England, UK",1,1,1,0.1
+"Mangaluru, Karnataka, India",1,1,1,0.1
+"Manhattan, NY",1,1,1,0.1
+"Manila, National Capital Region, Philippines",1,1,1,0.1
+"Kent, England, United Kingdom",1,1,1,0.1
+"Kolkata, West Bengal, India",1,1,1,0.1
+"La Molina, Peru",1,1,1,0.1
+"Lake Forest, IL",1,1,1,0.1
+"Las Condes, Santiago Metropolitan Region, Chile",1,1,1,0.1
+"Lehi, UT",1,1,1,0.1
+"Levallois-Perret, Île-de-France, France",1,1,1,0.1
+"Lexington, MA",1,1,1,0.1
+Bangkok Metropolitan Area,1,1,1,0.1
+"Bangkok, Bangkok City, Thailand",1,1,1,0.1
+"Barueri, São Paulo, Brazil",1,1,1,0.1
+"Belgaum, Karnataka, India",1,1,1,0.1
+"Belo Horizonte, Minas Gerais, Brazil",1,1,1,0.1
+"Bogota, D.C., Capital District, Colombia",1,1,1,0.1
+"Bogotá, Capital District, Colombia",1,1,1,0.1
+"Amsterdam-Centrum, North Holland, Netherlands",1,1,1,0.1
+"Culver City, CA",1,1,1,0.1
+"Cupertino, CA",1,1,1,0.1
+"Curitiba, Paraná, Brazil",1,1,1,0.1
+Dallas-Fort Worth Metroplex,1,1,1,0.1
+"Daly City, CA",1,1,1,0.1
+"Frankfort, KY",1,1,1,0.1
+"Frankfurt, Hesse, Germany",1,1,1,0.1
+"Fremont, CA, US",1,1,1,0.1
+"Frisco, TX, US",1,1,1,0.1
+"Gambir, Jakarta, Indonesia",1,1,1,0.1
+"Gauteng, South Africa",1,1,1,0.1
+"Dayton, OH, US",1,1,1,0.1
+"Delhi, India",1,1,1,0.1
+"Des Moines, IA",1,1,1,0.1
+"Los Gatos, CA, US",1,1,1,0.1
+"Lucknow, Uttar Pradesh, India",1,1,1,0.1
+"Lyon, Auvergne-Rhône-Alpes, France",1,1,1,0.1
+"Madrid, Community of Madrid, Spain",1,1,1,0.1
+"Orem, UT",1,1,1,0.1
+"Martinez, CA, US",1,1,1,0.1
+"McLean, VA",1,1,1,0.1
+"Medellín, Antioquia, Colombia",1,1,1,0.1
+Mexico City Metropolitan Area,1,1,1,0.1
+"Moorestown, NJ",1,1,1,0.1
+"Mossville, IL",1,1,1,0.1
+"Málaga, Andalusia, Spain",1,1,1,0.1
+"Littleton, CO",1,1,1,0.1
+"Livermore, CA",1,1,1,0.1
+"Pleasanton, CA",1,1,1,0.1
+"Pleasanton, CA, US",1,1,1,0.1
+"Pomona, CA",1,1,1,0.1
+"Portland, ME",1,1,1,0.1
+"Porto Alegre, Rio Grande do Sul, Brazil",1,1,1,0.1
+Porto Metropolitan Area,1,1,1,0.1
+"Nasr City, Cairo, Egypt",1,1,1,0.1
+"Nevada, United States",1,1,1,0.1
+"Newark, DE",1,1,1,0.1
+"Nottingham, England, United Kingdom",1,1,1,0.1
+Argentina,1,1,1,0.1
+"Arizona, United States",1,1,1,0.1
+"Arlington, VA, US",1,1,1,0.1
+"Arlington, WA",1,1,1,0.1
+"Ashburn, VA",1,1,1,0.1
+"Ashville, OH",1,1,1,0.1
+"Athens, Attiki, Greece",1,1,1,0.1
+"Auckland, Auckland, New Zealand",1,1,1,0.1
+"*******, **** ******, *****",1,1,1,0.1
+"*******, *******, ***** ******",1,1,1,0.1
+"Philadelphia, PA, US",1,1,1,0.1
+"City of Johannesburg, Gauteng, South Africa",1,1,1,0.1
+"Cleveland, OH",1,1,1,0.1
+"Boulogne-Billancourt, Île-de-France, France",1,1,1,0.1
+"Yakima, WA",1,1,1,0.1
+"Epsom, England, United Kingdom",1,1,1,0.1
+"Fareham, England, United Kingdom",1,1,1,0.1
+"Columbus, OH",1,1,1,0.1
+"Columbus, OH, US",1,1,1,0.1
+"Columbus, Ohio Metropolitan Area",1,1,1,0.1
+"Cork, County Cork, Ireland",1,1,1,0.1
+"Cornelius, NC",1,1,1,0.1
+"Costa Mesa, CA",1,1,1,0.1
+"County Dublin, Ireland",1,1,1,0.1
+"Covington, LA",1,1,1,0.1
+"Phoenix, AZ",1,1,1,0.1
+"Pittsburgh, PA, US",1,1,1,0.1
+"Santo André, São Paulo, Brazil",1,1,1,0.1
+"Post Falls, ID",1,1,1,0.1
+"Princeton, NJ",1,1,1,0.1
+"Purchase, NY",1,1,1,0.1
+"Reno, NV",1,1,1,0.1
+"Richmond, CA, US",1,1,1,0.1
+"Riyadh, Saudi Arabia",1,1,1,0.1
+"Rome, Latium, Italy",1,1,1,0.1
+"Sacramento, CA",1,1,1,0.1
+"Salisbury, England, United Kingdom",1,1,1,0.1
+Salt Lake City Metropolitan Area,1,1,1,0.1
+"Antioch, CA, US",1,1,1,0.1
+"Spring House, PA",1,1,1,0.1
+"Springfield, VA",1,1,1,0.1
+"St Paul, MN",1,1,1,0.1
+"Stains, Île-de-France, France",1,1,1,0.1
+"Stamford, CT",1,1,1,0.1
+"San Diego, CA",1,1,1,0.1
+"San Francisco County, CA",1,1,1,0.1
+"Slough, England, United Kingdom",1,1,1,0.1
+"South Jordan, UT",1,1,1,0.1
+"Davangere Taluka, Karnataka, India",1,1,1,0.1
+"Cambridge, England, UK",1,1,1,0.1
+"Cambridge, England, United Kingdom",1,1,1,0.1
+"Campbell, CA, US",1,1,1,0.1
+"Campinas, São Paulo, Brazil",1,1,1,0.1
+"Cascavel, Paraná, Brazil",1,1,1,0.1
+Charlotte Metro,1,1,1,0.1
+"Chiswick, England, United Kingdom",1,1,1,0.1
+"Christchurch, Canterbury, New Zealand",1,1,1,0.1
+"Cincinnati, OH",1,1,1,0.1
+"Sandy Springs, GA",1,1,1,0.1
+"Santa Clara, CA",1,1,1,0.1
+United Kingdom,1,1,1,0.1
+"***** ******, ******* ********* ** ***** ******, ********",1,1,1,0.1
+"Walnut Creek, CA",1,1,1,0.1
+"Wayzata, MN, US",1,1,1,0.1
+"Wellington, Wellington, New Zealand",1,1,1,0.1
+"West Yorkshire, England, UK",1,1,1,0.1
+"Westfield Center, OH",1,1,1,0.1
+"Whitehall, MI",1,1,1,0.1
+"Vélizy-Villacoublay, Île-de-France, France",1,1,1,0.1
+"Taipei, Taipei City, Taiwan",1,1,1,0.1
+"*** *********, **",1,1,1,0.1
+"Tangerang, Banten, Indonesia",1,1,1,0.1
+"***** *******, *******, *********",1,1,1,0.1
