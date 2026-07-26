@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 from api.routers.companies import router as companies_router
 from api.routers.dashboard import router as dashboard_router
+from api.routers.locations import router as locations_router
+from api.routers.sources import router as sources_router
+from api.routers.trends import router as trends_router
+
 
 app = FastAPI(
     title="CareerLens-AI API",
@@ -10,7 +14,9 @@ app = FastAPI(
 
 app.include_router(dashboard_router)
 app.include_router(companies_router)
-
+app.include_router(locations_router)
+app.include_router(sources_router)
+app.include_router(trends_router)
 
 @app.get("/")
 def root():

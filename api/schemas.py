@@ -12,3 +12,19 @@ class CompanyResponse(BaseModel):
     company_id: int
     company_name: str
     total_jobs: int
+
+class LocationResponse(BaseModel):
+    location_id: int
+    location_name: str
+    total_jobs: int
+
+
+class SourceResponse(BaseModel):
+    source_id: int
+    source_name: str
+    total_jobs: int
+
+
+class TrendResponse(BaseModel):
+    date_posted: str
+    total_jobs: int
