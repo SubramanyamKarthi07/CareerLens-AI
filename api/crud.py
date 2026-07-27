@@ -137,3 +137,230 @@ def get_trend_statistics(db):
         })
 
     return trends
+
+def get_job_list(db, limit=20, offset=0):
+
+    query = text("""
+        SELECT
+            j.job_id,
+            j.title,
+            c.company_name AS company,
+            l.location_name AS location,
+            s.source_name AS source,
+            j.date_posted,
+            j.description,
+            j.link
+        FROM job_postings j
+
+        JOIN companies c
+            ON j.company_id = c.company_id
+
+        JOIN locations l
+            ON j.location_id = l.location_id
+
+        JOIN sources s
+            ON j.source_id = s.source_id
+
+        ORDER BY j.job_id
+        LIMIT :limit
+        OFFSET :offset;
+    """)
+
+    result = db.execute(
+        query,
+        {
+            "limit": limit,
+            "offset": offset
+        }
+    )
+
+    jobs = []
+
+    for row in result:
+        jobs.append({
+            "job_id": row.job_id,
+            "title": row.title,
+            "company": row.company,
+            "location": row.location,
+            "source": row.source,
+            "date_posted": str(row.date_posted),
+            "description": row.description,
+            "link": row.link
+        })
+
+    return jobs
+
+
+def search_jobs(db, keyword: str):
+
+    query = text("""
+        SELECT
+            j.job_id,
+            j.title,
+            c.company_name,
+            l.location_name,
+            s.source_name,
+            j.date_posted,
+            j.description,
+            j.link
+        FROM job_postings j
+        JOIN companies c
+            ON j.company_id = c.company_id
+        JOIN locations l
+            ON j.location_id = l.location_id
+        JOIN sources s
+            ON j.source_id = s.source_id
+        WHERE
+            LOWER(j.title) LIKE LOWER(:keyword)
+            OR LOWER(j.description) LIKE LOWER(:keyword)
+        ORDER BY j.date_posted DESC;
+    """)
+
+    result = db.execute(
+        query,
+        {"keyword": f"%{keyword}%"}
+    )
+
+    jobs = []
+
+    for row in result:
+        jobs.append({
+            "job_id": row.job_id,
+            "title": row.title,
+            "company": row.company_name,
+            "location": row.location_name,
+            "source": row.source_name,
+            "date_posted": str(row.date_posted),
+            "description": row.description,
+            "link": row.link
+        })
+
+    return jobs
+
+
+def filter_jobs(
+    db,
+    company=None,
+    location=None,
+    source=None,
+    date_posted=None,
+    sort_by="date_posted",
+    order="desc"
+):
+
+    query = """
+        SELECT
+            j.job_id,
+            j.title,
+            c.company_name AS company,
+            l.location_name AS location,
+            s.source_name AS source,
+            j.date_posted,
+            j.description,
+            j.link
+        FROM job_postings j
+
+        JOIN companies c
+            ON j.company_id = c.company_id
+
+        JOIN locations l
+            ON j.location_id = l.location_id
+
+        JOIN sources s
+            ON j.source_id = s.source_id
+    """
+
+    conditions = []
+    params = {}
+
+    if company:
+        conditions.append(
+            "LOWER(c.company_name) LIKE LOWER(:company)"
+        )
+        params["company"] = f"%{company}%"
+
+    if location:
+        conditions.append(
+            "LOWER(l.location_name) LIKE LOWER(:location)"
+        )
+        params["location"] = f"%{location}%"
+
+    if source:
+        conditions.append(
+            "LOWER(s.source_name) LIKE LOWER(:source)"
+        )
+        params["source"] = f"%{source}%"
+
+    if date_posted:
+        conditions.append(
+            "j.date_posted = :date_posted"
+        )
+        params["date_posted"] = date_posted
+
+    if conditions:
+        query += "\nWHERE " + "\nAND ".join(conditions)
+
+    # Allowed sorting columns
+    sort_columns = {
+        "date_posted": "j.date_posted",
+        "title": "j.title",
+        "company": "c.company_name",
+        "location": "l.location_name",
+        "source": "s.source_name"
+    }
+
+    # Get the database column for sorting
+    sort_column = sort_columns.get(sort_by, "j.date_posted")
+
+    # Determine sorting order
+    sort_order = "ASC" if order.lower() == "asc" else "DESC"
+
+    query += f"""
+        ORDER BY {sort_column} {sort_order};
+    """
+
+    result = db.execute(
+        text(query),
+        params
+    )
+
+    jobs = []
+
+    for row in result:
+        jobs.append({
+            "job_id": row.job_id,
+            "title": row.title,
+            "company": row.company,
+            "location": row.location,
+            "source": row.source,
+            "date_posted": str(row.date_posted),
+            "description": row.description,
+            "link": row.link
+        })
+
+    return jobs
+
+
+def get_job_statistics(db):
+
+    query = text("""
+        SELECT
+            COUNT(*) AS total_jobs,
+            COUNT(DISTINCT company_id) AS unique_companies,
+            COUNT(DISTINCT location_id) AS unique_locations,
+            COUNT(DISTINCT source_id) AS unique_sources,
+            MIN(date_posted) AS oldest_job_date,
+            MAX(date_posted) AS latest_job_date
+        FROM job_postings;
+    """)
+
+    result = db.execute(query).fetchone()
+
+    return {
+        "total_jobs": result.total_jobs,
+        "unique_companies": result.unique_companies,
+        "unique_locations": result.unique_locations,
+        "unique_sources": result.unique_sources,
+        "oldest_job_date": str(result.oldest_job_date),
+        "latest_job_date": str(result.latest_job_date)
+    }

@@ -3,7 +3,11 @@ from api.crud import (
     get_company_statistics,
     get_location_statistics,
     get_source_statistics,
-    get_trend_statistics
+    get_trend_statistics,
+    get_job_list,
+    search_jobs,
+    filter_jobs,
+    get_job_statistics
 )
 
 def dashboard_summary(db):
@@ -22,3 +26,31 @@ def source_summary(db):
 
 def trend_summary(db):
     return get_trend_statistics(db)
+
+def job_summary(db, limit=20, offset=0):
+    return get_job_list(db, limit, offset)
+
+def job_search(db, keyword):
+    return search_jobs(db, keyword)
+
+def job_filter(
+    db,
+    company=None,
+    location=None,
+    source=None,
+    date_posted=None,
+    sort_by="date_posted",
+    order="desc"
+):
+    return filter_jobs(
+        db,
+        company,
+        location,
+        source,
+        date_posted,
+        sort_by,
+        order
+    )
+
+def job_statistics(db):
+    return get_job_statistics(db)

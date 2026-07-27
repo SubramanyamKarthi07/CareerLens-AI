@@ -28,3 +28,14 @@ class SourceResponse(BaseModel):
 class TrendResponse(BaseModel):
     date_posted: str
     total_jobs: int
+
+
+class JobResponse(BaseModel):
+    job_id: int
+    title: str
+    company: str
+    location: str
+    source: str
+    date_posted: str
+    description: str
+    link: str
