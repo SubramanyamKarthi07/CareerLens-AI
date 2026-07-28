@@ -2,13 +2,20 @@ from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 
 from api.database import get_db
-from api.schemas import JobResponse
+from api.schemas import (
+    JobResponse,
+    RecommendationRequest,
+    RecommendationResponse
+)
+
 from api.services.analytics_service import (
     job_summary,
     job_search,
     job_filter,
-    job_statistics
+    job_statistics,
+    job_recommendation
 )
+
 
 router = APIRouter(
     prefix="/jobs",
@@ -48,10 +55,6 @@ def search_job(
     "/filter",
     response_model=list[JobResponse]
 )
-@router.get(
-    "/filter",
-    response_model=list[JobResponse]
-)
 def filter_job(
     company: str | None = None,
     location: str | None = None,
@@ -76,3 +79,29 @@ def get_job_statistics(
     db: Session = Depends(get_db)
 ):
     return job_statistics(db)
+
+@router.post(
+    "/recommend",
+    response_model=list[RecommendationResponse]
+)
+def recommend_job(
+    request: RecommendationRequest,
+    db: Session = Depends(get_db)
+):
+    return job_recommendation(
+        db,
+        request.skills
+    )
+
+@router.post(
+    "/recommend",
+    response_model=list[RecommendationResponse]
+)
+def recommend_job(
+    request: RecommendationRequest,
+    db: Session = Depends(get_db)
+):
+    return job_recommendation(
+        db,
+        request.skills
+    )

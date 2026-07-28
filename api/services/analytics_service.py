@@ -1,4 +1,4 @@
-from api.crud import (
+from api.repositories.analytics_repository import (
     get_dashboard_metrics,
     get_company_statistics,
     get_location_statistics,
@@ -7,8 +7,10 @@ from api.crud import (
     get_job_list,
     search_jobs,
     filter_jobs,
-    get_job_statistics
+    get_job_statistics,
 )
+
+from api.crud import recommend_jobs
 
 def dashboard_summary(db):
     return get_dashboard_metrics(db)
@@ -54,3 +56,6 @@ def job_filter(
 
 def job_statistics(db):
     return get_job_statistics(db)
+
+def job_recommendation(db, skills):
+    return recommend_jobs(db, skills)

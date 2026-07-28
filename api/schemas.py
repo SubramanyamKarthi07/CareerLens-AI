@@ -39,3 +39,16 @@ class JobResponse(BaseModel):
     date_posted: str
     description: str
     link: str
+
+
+class RecommendationRequest(BaseModel):
+    skills: list[str]
+
+
+class RecommendationResponse(BaseModel):
+    job_id: int
+    title: str
+    company: str
+    location: str
+    source: str
+    match_score: float
