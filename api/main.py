@@ -5,6 +5,7 @@ from api.routers.locations import router as locations_router
 from api.routers.sources import router as sources_router
 from api.routers.trends import router as trends_router
 from api.routers.jobs import router as jobs_router
+from api.routers.resume import router as resume_router
 
 
 app = FastAPI(
@@ -19,6 +20,7 @@ app.include_router(locations_router)
 app.include_router(sources_router)
 app.include_router(trends_router)
 app.include_router(jobs_router)
+app.include_router(resume_router)
 
 @app.get("/")
 def root():

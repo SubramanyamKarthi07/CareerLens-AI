@@ -7,13 +7,12 @@ from api.schemas import (
     RecommendationRequest,
     RecommendationResponse
 )
-
+from api.services.recommendation_service import job_recommendation
 from api.services.analytics_service import (
     job_summary,
     job_search,
     job_filter,
     job_statistics,
-    job_recommendation
 )
 
 

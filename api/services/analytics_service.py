@@ -10,7 +10,6 @@ from api.repositories.analytics_repository import (
     get_job_statistics,
 )
 
-from api.crud import recommend_jobs
 
 def dashboard_summary(db):
     return get_dashboard_metrics(db)
@@ -57,5 +56,3 @@ def job_filter(
 def job_statistics(db):
     return get_job_statistics(db)
 
-def job_recommendation(db, skills):
-    return recommend_jobs(db, skills)
