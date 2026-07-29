@@ -52,3 +52,29 @@ class RecommendationResponse(BaseModel):
     location: str
     source: str
     match_score: float
+
+
+# ------------------------------
+# Resume Analysis Schema
+# ------------------------------
+
+class ResumeAnalysisResponse(BaseModel):
+    filename: str
+    characters: int
+    skills: list[str]
+    preview: str
+
+# ------------------------------
+# Job Matching Schemas
+# ------------------------------
+
+class ResumeMatchingResponse(BaseModel):
+    job_id: int
+    title: str
+    company: str
+    location: str
+    source: str
+    link: str | None = None
+    match_score: float
+    matched_skills: list[str]
+    missing_skills: list[str]
