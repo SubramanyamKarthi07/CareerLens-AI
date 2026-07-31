@@ -78,3 +78,10 @@ class ResumeMatchingResponse(BaseModel):
     match_score: float
     matched_skills: list[str]
     missing_skills: list[str]
+    recommendation: str
+
+class ResumeScoreResponse(BaseModel):
+    resume_score: float
+    strengths: list[str]
+    areas_to_improve: list[str]
+    summary: str
