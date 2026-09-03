@@ -91,16 +91,3 @@ def recommend_job(
         db,
         request.skills
     )
-
-@router.post(
-    "/recommend",
-    response_model=list[RecommendationResponse]
-)
-def recommend_job(
-    request: RecommendationRequest,
-    db: Session = Depends(get_db)
-):
-    return job_recommendation(
-        db,
-        request.skills
-    )

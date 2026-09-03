@@ -85,3 +85,13 @@ class ResumeScoreResponse(BaseModel):
     strengths: list[str]
     areas_to_improve: list[str]
     summary: str
+
+class RoadmapItem(BaseModel):
+    week: int
+    focus: str
+    goal: str
+    practice: str
+
+
+class RoadmapResponse(BaseModel):
+    roadmap: list[RoadmapItem]

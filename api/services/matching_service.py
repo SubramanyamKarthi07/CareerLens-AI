@@ -23,11 +23,17 @@ def match_resume_with_jobs(db: Session, resume_text: str):
         # Extract skills from the job description
         job_skills = set(extract_skills(job["description"] or ""))
 
+        if not job_skills:
+            continue
+
         # Calculate weighted match score
         match_score, matched_skills, missing_skills = calculate_weighted_score(
             resume_skills,
             job_skills
         )
+
+        if match_score < 25:
+            continue
 
         # Generate recommendation
         recommendation = generate_recommendation(missing_skills)
