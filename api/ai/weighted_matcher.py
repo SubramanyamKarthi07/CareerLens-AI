@@ -19,7 +19,7 @@ SKILL_WEIGHTS = {
 
 def calculate_weighted_score(resume_skills, job_skills):
     """
-    Calculate weighted match score between resume skills and job skills.
+    Calculate an intelligent weighted match score.
 
     Returns:
         score (float)
@@ -27,25 +27,40 @@ def calculate_weighted_score(resume_skills, job_skills):
         missing_skills (list)
     """
 
-    resume_skills = set(resume_skills)
-    job_skills = set(job_skills)
+    resume_skills = {skill.lower() for skill in resume_skills}
+    job_skills = {skill.lower() for skill in job_skills}
 
-    matched_skills = sorted(resume_skills & job_skills)
-    missing_skills = sorted(job_skills - resume_skills)
+    matched_skills = sorted(list(resume_skills & job_skills))
+    missing_skills = sorted(list(job_skills - resume_skills))
 
-    total_weight = 0
+    total_job_weight = 0
     matched_weight = 0
 
+    # Weight based on job requirements
     for skill in job_skills:
-        weight = SKILL_WEIGHTS.get(skill.lower(), 5)
-        total_weight += weight
+        weight = SKILL_WEIGHTS.get(skill, 5)
+        total_job_weight += weight
 
         if skill in resume_skills:
             matched_weight += weight
 
-    score = 0
+    # Required Skill Match (70%)
+    if total_job_weight == 0:
+        required_match = 0
+    else:
+        required_match = (matched_weight / total_job_weight) * 100
 
-    if total_weight > 0:
-        score = round((matched_weight / total_weight) * 100, 2)
+    # Resume Coverage (30%)
+    if len(resume_skills) == 0:
+        coverage = 0
+    else:
+        coverage = (len(matched_skills) / len(resume_skills)) * 100
+
+    # Final weighted score
+    score = round(
+        (required_match * 0.7) +
+        (coverage * 0.3),
+        2
+    )
 
     return score, matched_skills, missing_skills

@@ -8,6 +8,7 @@ from api.routers.jobs import router as jobs_router
 from api.routers.resume import router as resume_router
 from api.routers import matching
 from api.routers.roadmap import router as roadmap_router
+from api.routers.career_report import router as career_report_router
 
 app = FastAPI(
     title="CareerLens-AI API",
@@ -24,6 +25,7 @@ app.include_router(jobs_router)
 app.include_router(resume_router)
 app.include_router(matching.router)
 app.include_router(roadmap_router)
+app.include_router(career_report_router)
 
 @app.get("/")
 def root():

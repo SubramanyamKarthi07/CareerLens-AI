@@ -95,3 +95,13 @@ class RoadmapItem(BaseModel):
 
 class RoadmapResponse(BaseModel):
     roadmap: list[RoadmapItem]
+
+
+class CareerReportResponse(BaseModel):
+    resume_score: int
+    strengths: list[str]
+    weaknesses: list[str]
+    recommendations: list[RecommendationResponse]
+    roadmap: list[RoadmapItem]
+    career_level: str
+    career_summary: str
