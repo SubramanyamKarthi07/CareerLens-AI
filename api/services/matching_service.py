@@ -1,3 +1,4 @@
+
 from sqlalchemy.orm import Session
 
 from api.services.skill_service import get_resume_skills
@@ -5,6 +6,7 @@ from api.repositories.matching_repository import get_all_jobs
 from api.repositories.skill_repository import extract_skills
 from api.ai.weighted_matcher import calculate_weighted_score
 from api.ai.career_advisor import generate_recommendation
+from api.ai.role_ranker import calculate_final_job_score
 
 
 def match_resume_with_jobs(db: Session, resume_text: str):
@@ -16,7 +18,6 @@ def match_resume_with_jobs(db: Session, resume_text: str):
     resume_skills = set(get_resume_skills(resume_text))
 
     jobs = get_all_jobs(db)
-
     recommendations = []
 
     for job in jobs:
@@ -26,13 +27,19 @@ def match_resume_with_jobs(db: Session, resume_text: str):
         if not job_skills:
             continue
 
-        # Calculate weighted match score
+        # Calculate technical skill-match score
         match_score, matched_skills, missing_skills = calculate_weighted_score(
             resume_skills,
             job_skills
         )
 
-        if match_score < 25:
+        # Calculate career-role relevance score
+        final_score = calculate_final_job_score(
+            match_score,
+            job["title"] or ""
+        )
+
+        if final_score < 25:
             continue
 
         # Generate recommendation
@@ -45,11 +52,13 @@ def match_resume_with_jobs(db: Session, resume_text: str):
             "location": job["location_name"],
             "source": job["source_name"],
             "link": job["link"],
-            "match_score": match_score,
+            "match_score": final_score,
+            "technical_match_score": match_score,
             "matched_skills": matched_skills,
             "missing_skills": missing_skills,
             "recommendation": recommendation
         })
+
     recommendations.sort(
         key=lambda x: x["match_score"],
         reverse=True
