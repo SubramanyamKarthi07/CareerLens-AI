@@ -32,12 +32,14 @@ def match_resume_with_jobs(db: Session, resume_text: str):
             resume_skills,
             job_skills
         )
-
-        # Calculate career-role relevance score
+        # Calculate career-role and location relevance score
         final_score = calculate_final_job_score(
-            match_score,
-            job["title"] or ""
+            match_score=match_score,
+            job_title=job["title"] or "",
+            job_location=job["location_name"] or "",
+            job_description=job["description"] or ""
         )
+
 
         if final_score < 25:
             continue

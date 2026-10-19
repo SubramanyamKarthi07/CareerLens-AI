@@ -6,68 +6,79 @@ def analyze_improvement_areas(
 ) -> list[str]:
     """
     Identify practical resume and career improvement areas
-    using basic keyword checks and job-specific skill gaps.
+    using resume evidence and recommended-job skill gaps.
     """
-    text = resume_text.lower()
-    skills = {skill.lower() for skill in resume_skills}
+    text = (resume_text or "").lower()
+    skills = {
+        skill.strip().lower()
+        for skill in (resume_skills or [])
+        if skill and skill.strip()
+    }
+
     improvements = []
 
-    # 1. Identify job-specific skill gaps across the top five jobs
-    missing_skills = set()
+    # 1. Identify skill gaps across the top five recommendations
+    missing_skill_counts = {}
 
-    for job in recommendations[:5]:
-        for skill in job.get("missing_skills", []):
+    for job in (recommendations or []):
+        for skill in job.get("missing_skills") or []:
             normalized_skill = skill.strip().lower()
-            if normalized_skill and normalized_skill not in skills:
-                missing_skills.add(normalized_skill)
 
-    if missing_skills:
-        improvements.append(
-            "Prioritize learning or demonstrating these skills for "
-            "your target roles: "
-            + ", ".join(sorted(missing_skills)[:5])
-            + "."
+            if normalized_skill and normalized_skill not in skills:
+                missing_skill_counts[normalized_skill] = (
+                    missing_skill_counts.get(normalized_skill, 0) + 1
+                )
+
+    # Prioritize skills appearing in multiple recommended jobs
+    if missing_skill_counts:
+        ranked_missing_skills = sorted(
+            missing_skill_counts,
+            key=lambda skill: (-missing_skill_counts[skill], skill)
         )
 
-    # 2. Check for project evidence
-    has_projects = "project" in text
+        improvements.append(
+            "Consider developing or demonstrating these skills "
+            "requested by your recommended jobs: "
+            + ", ".join(ranked_missing_skills[:5])
+            + ". Verify each job's requirements before prioritizing."
+        )
+
+    # 2. Check project evidence
+    has_projects = any(
+        keyword in text
+        for keyword in ["project", "projects"]
+    )
+
     project_action_keywords = [
         "developed", "built", "implemented",
         "designed", "automated", "analyzed"
     ]
 
-    has_project_actions = any(
-        keyword in text for keyword in project_action_keywords
-    )
-
     if not has_projects:
         improvements.append(
             "Add a dedicated projects section featuring relevant "
-            "data analytics projects."
+            "data analytics projects, the tools used, and the problem solved."
         )
-    elif not has_project_actions:
+    elif not any(keyword in text for keyword in project_action_keywords):
         improvements.append(
-            "Describe your project contributions using specific actions, "
+            "Strengthen project descriptions with specific actions, "
             "tools, and problems solved."
         )
 
-    # 3. Check for evidence of measurable impact
+    # 3. Check measurable outcomes
     impact_keywords = [
         "increased", "reduced", "improved", "saved",
         "achieved", "accuracy", "%"
     ]
 
-    has_impact_evidence = any(
-        keyword in text for keyword in impact_keywords
-    )
-
-    if not has_impact_evidence:
+    if not any(keyword in text for keyword in impact_keywords):
         improvements.append(
-            "Where supported by evidence, quantify project or internship "
-            "outcomes, such as time saved, records processed, or accuracy."
+            "Where evidence is available, quantify project or internship "
+            "outcomes, such as records processed, time saved, or accuracy. "
+            "Do not invent metrics."
         )
 
-    # 4. Check for practical experience
+    # 4. Check practical experience
     experience_keywords = [
         "internship", "intern", "work experience",
         "employment", "professional experience"
@@ -75,11 +86,11 @@ def analyze_improvement_areas(
 
     if not any(keyword in text for keyword in experience_keywords):
         improvements.append(
-            "Highlight relevant internship, practical work, or experience "
-            "with clear responsibilities."
+            "Highlight relevant internships or practical experience, "
+            "including your responsibilities and contributions."
         )
 
-    # 5. Check for certifications
+    # 5. Check certifications
     certification_keywords = [
         "certification", "certifications",
         "certified", "certificate"
@@ -87,15 +98,15 @@ def analyze_improvement_areas(
 
     if not any(keyword in text for keyword in certification_keywords):
         improvements.append(
-            "Include relevant certifications you have completed, if applicable."
+            "List relevant certifications you have completed, if applicable."
         )
 
-    # 6. Actionable fallback when no gaps are detected
+    # 6. Provide useful feedback if no specific issue was detected
     if not improvements:
         improvements.append(
-            "Review your resume against each target job description. "
-            "Prioritize relevant skills and make project contributions "
-            "and outcomes clear, accurate, and easy to verify."
+            "Your resume passed the current basic checks. For a more "
+            "targeted review, compare its project evidence and demonstrated "
+            "skills with the requirements of your preferred job descriptions."
         )
 
     return improvements

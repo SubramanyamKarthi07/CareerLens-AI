@@ -45,6 +45,7 @@ class RecommendationRequest(BaseModel):
     skills: list[str]
 
 
+
 class RecommendationResponse(BaseModel):
     job_id: int
     title: str
@@ -52,6 +53,12 @@ class RecommendationResponse(BaseModel):
     location: str
     source: str
     match_score: float
+    technical_match_score: float | None = None
+    link: str | None = None
+    matched_skills: list[str] = []
+    missing_skills: list[str] = []
+    recommendation: str | None = None
+
 
 
 # ------------------------------
