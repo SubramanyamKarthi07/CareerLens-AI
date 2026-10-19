@@ -51,7 +51,7 @@ The application separates responsibilities into API routes, schemas, repositorie
 Clone the repository:
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/SubramanyamKarthi07/CareerLens-AI.git
 cd CareerLens-AI
 ```
 
