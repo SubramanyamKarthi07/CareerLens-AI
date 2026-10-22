@@ -1,4 +1,6 @@
 
+import time
+
 from sqlalchemy.orm import Session
 
 from api.services.skill_service import get_resume_skills
@@ -10,42 +12,66 @@ from api.ai.role_ranker import calculate_final_job_score
 
 
 def match_resume_with_jobs(db: Session, resume_text: str):
-    """
-    Match a resume against all jobs in the database.
-    """
+    total_start = time.perf_counter()
 
-    # Extract skills from the resume
+    # 1. Extract resume skills
+    start = time.perf_counter()
     resume_skills = set(get_resume_skills(resume_text))
+    print(
+        f"[MATCH TIMING] Resume skills: "
+        f"{time.perf_counter() - start:.2f}s"
+    )
 
+    # 2. Fetch jobs from the database
+    start = time.perf_counter()
     jobs = get_all_jobs(db)
+    print(
+        f"[MATCH TIMING] Database fetch: "
+        f"{time.perf_counter() - start:.2f}s "
+        f"({len(jobs)} jobs)"
+    )
+
+    # 3. Score and rank jobs
+    scoring_start = time.perf_counter()
     recommendations = []
+    extraction_time = 0.0
+    scoring_time = 0.0
+    recommendation_time = 0.0
 
     for job in jobs:
-        # Extract skills from the job description
-        job_skills = set(extract_skills(job["description"] or ""))
+        start = time.perf_counter()
+        job_skills = set(
+            extract_skills(job["description"] or "")
+        )
+        extraction_time += time.perf_counter() - start
 
         if not job_skills:
             continue
 
-        # Calculate technical skill-match score
-        match_score, matched_skills, missing_skills = calculate_weighted_score(
-            resume_skills,
-            job_skills
+        start = time.perf_counter()
+        match_score, matched_skills, missing_skills = (
+            calculate_weighted_score(
+                resume_skills,
+                job_skills
+            )
         )
-        # Calculate career-role and location relevance score
+
         final_score = calculate_final_job_score(
             match_score=match_score,
             job_title=job["title"] or "",
             job_location=job["location_name"] or "",
             job_description=job["description"] or ""
         )
-
+        scoring_time += time.perf_counter() - start
 
         if final_score < 25:
             continue
 
-        # Generate recommendation
-        recommendation = generate_recommendation(missing_skills)
+        start = time.perf_counter()
+        recommendation = generate_recommendation(
+            missing_skills
+        )
+        recommendation_time += time.perf_counter() - start
 
         recommendations.append({
             "job_id": job["job_id"],
@@ -61,9 +87,29 @@ def match_resume_with_jobs(db: Session, resume_text: str):
             "recommendation": recommendation
         })
 
+    print(
+        f"[MATCH TIMING] Job skill extraction: "
+        f"{extraction_time:.2f}s"
+    )
+    print(
+        f"[MATCH TIMING] Scoring and ranking: "
+        f"{scoring_time:.2f}s"
+    )
+    print(
+        f"[MATCH TIMING] Recommendation generation: "
+        f"{recommendation_time:.2f}s"
+    )
+
     recommendations.sort(
         key=lambda x: x["match_score"],
         reverse=True
     )
 
-    return recommendations[:10]
+    result = recommendations[:10]
+
+    print(
+        f"[MATCH TIMING] Total matching: "
+        f"{time.perf_counter() - total_start:.2f}s"
+    )
+
+    return result

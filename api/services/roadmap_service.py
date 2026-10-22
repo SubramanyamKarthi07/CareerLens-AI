@@ -1,3 +1,4 @@
+
 from api.ai.roadmap_generator import generate_learning_roadmap
 from api.services.matching_service import match_resume_with_jobs
 from api.services.skill_service import get_resume_skills
@@ -11,24 +12,37 @@ def get_learning_roadmap(missing_skills):
     return generate_learning_roadmap(missing_skills)
 
 
-def generate_roadmap_from_resume(db, resume_text):
+def generate_roadmap_from_resume(
+    db,
+    resume_text,
+    recommendations=None
+):
     """
     Generate a personalized learning roadmap using resume skills
     and skill gaps from relevant job recommendations.
+
+    Reuses existing recommendations when supplied to avoid
+    running job matching twice for the same career report.
     """
 
     # 1. Extract the candidate's existing skills
     resume_skills = get_resume_skills(resume_text)
+
     resume_skill_set = {
-        skill.lower().strip() for skill in resume_skills
+        skill.lower().strip()
+        for skill in resume_skills
     }
 
-    # 2. Get recommended jobs using the existing matching service
-    recommendations = match_resume_with_jobs(db, resume_text)
+    # 2. Reuse recommendations if already calculated
+    if recommendations is None:
+        recommendations = match_resume_with_jobs(
+            db,
+            resume_text
+        )
 
-
-    # 3. Collect missing skills from the top Data Analyst-related jobs
+    # 3. Collect missing skills from the top 5 recommendations
     job_missing_skills = []
+    seen_missing_skills = set()
 
     for job in recommendations[:5]:
         for skill in job.get("missing_skills", []):
@@ -37,9 +51,10 @@ def generate_roadmap_from_resume(db, resume_text):
             if (
                 normalized_skill
                 and normalized_skill not in resume_skill_set
-                and normalized_skill not in job_missing_skills
+                and normalized_skill not in seen_missing_skills
             ):
                 job_missing_skills.append(normalized_skill)
+                seen_missing_skills.add(normalized_skill)
 
     # 4. Prioritize common Data Analyst skills
     priority_skills = [
@@ -56,17 +71,19 @@ def generate_roadmap_from_resume(db, resume_text):
     ]
 
     prioritized_missing = [
-        skill for skill in priority_skills
-        if skill in job_missing_skills
+        skill
+        for skill in priority_skills
+        if skill in seen_missing_skills
     ]
 
     # 5. Add other job-specific missing skills
     remaining_missing = [
-        skill for skill in job_missing_skills
+        skill
+        for skill in job_missing_skills
         if skill not in prioritized_missing
     ]
 
-    # 6. Fill remaining spaces with career progression skills
+    # 6. Add career progression skills
     progression_skills = recommend_next_skills(resume_skills)
 
     combined_skills = (
@@ -75,13 +92,14 @@ def generate_roadmap_from_resume(db, resume_text):
         + [
             skill.lower().strip()
             for skill in progression_skills
-            if skill.lower().strip() not in job_missing_skills
+            if skill.lower().strip()
+            and skill.lower().strip() not in seen_missing_skills
         ]
     )
 
-    # Keep the roadmap focused and avoid duplicate skills
+    # 7. Remove duplicates and select up to five skills
     unique_skills = list(dict.fromkeys(combined_skills))
     next_skills = unique_skills[:5]
 
-    # 7. Generate the four-week roadmap
+    # 8. Generate the four-week roadmap
     return generate_learning_roadmap(next_skills)
